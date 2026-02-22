@@ -3,15 +3,19 @@ import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/1
 
 document.getElementById("loginForm").addEventListener("submit", function(e){
   e.preventDefault();
+const form = document.getElementById("registerForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // VERY IMPORTANT
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      window.location.href = "dashboard.html";
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      alert("Registration successful!");
     })
-    .catch(error => {
-      document.getElementById("message").innerText = error.message;
+    .catch((error) => {
+      alert(error.message);
     });
 });
