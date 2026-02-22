@@ -3,114 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Nicenrish VTU</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: linear-gradient(135deg,#0d6efd,#0047ab);
-      color: white;
-      padding: 25px 20px;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      text-align: center;
-    }
-
-    .welcome {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-top: 5px;
-    }
-
-    .balance-card {
-      background: white;
-      margin: -30px 20px 20px 20px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .balance-title { font-size: 14px; color: gray; }
-    .balance-amount { font-size: 28px; font-weight: bold; margin-top: 5px; color: #0d6efd; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .service {
-      background: white;
-      padding: 25px 10px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-      cursor: pointer;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-      background: #0d6efd;
-      color: white;
-    }
-
-    #logoutBtn {
-      width: calc(100% - 40px);
-      margin: 20px;
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      background: #dc3545;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    #logoutBtn:hover { background: #a71d2a; }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: gray;
-    }
-  </style>
+  <title>Dashboard - Glory90</title>
 </head>
-
 <body>
 
-<header>
-  <h2>Nicenrish VTU</h2>
-  <div class="welcome">Welcome back 👋</div>
-</header>
-
-<div class="balance-card">
-  <div class="balance-title">Wallet Balance</div>
-  <div class="balance-amount">₦5,000</div>
-</div>
-
-<div class="grid">
-  <button class="service" id="airtimeBtn">📞 Airtime</button>
-  <button class="service" id="dataBtn">📶 Data</button>
-  <button class="service" id="fundBtn">💳 Fund Wallet</button>
-  <button class="service" id="transactionsBtn">📜 Transactions</button>
-</div>
-
+<h2>Dashboard</h2>
+<p id="userEmail"></p>
 <button id="logoutBtn">Logout</button>
 
-<footer>
-  Need Help? support@nicenrish.com
-</footer>
+<script type="module" src="dashboard.js"></script>
 
-<script type="module" src="./dashboard.js"></script>
 </body>
 </html>
